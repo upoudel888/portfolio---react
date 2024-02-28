@@ -6,7 +6,7 @@ import { motion, useAnimation, useInView } from "framer-motion";
 
 const Contact = () => {
   const ref = useRef(null);
-  const isInview = useInView(ref, { once: true });
+  const isInview = useInView(ref);
 
   const mainControls = useAnimation();
 
@@ -14,7 +14,7 @@ const Contact = () => {
     if (isInview) {
       mainControls.start("visible");
     }
-  });
+  },[isInview,mainControls]);
 
   const [message, setMessage] = useState(false);
   const formRef = useRef();
@@ -48,7 +48,7 @@ const Contact = () => {
         }}
         initial="hidden"
         animate={mainControls}
-        transition={{ duration: 1, delay: 0.25 ,ease:'easeIn'}}
+        transition={{ duration: 0.6, delay: 0.25 ,ease:'easeIn'}}
       >
         <section id="contact">
           <h5>Get In Touch</h5>

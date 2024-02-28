@@ -27,7 +27,7 @@ const Intro = () => {
         }}
         initial="hidden"
         animate={mainControls}
-        transition={{ duration: 1, delay: 0.25,ease:'easeIn' }}
+        transition={{ duration: 0.6, delay: 0.25,ease:'easeIn' }}
       >
         <section id="about">
           <h5>Get to know</h5>

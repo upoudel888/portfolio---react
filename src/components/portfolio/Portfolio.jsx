@@ -100,7 +100,7 @@ const Portfolio = () => {
               }}
               initial="hidden"
               animate={mainControls}
-              transition={{ duration: 1, delay: 0.5,ease:'easeIn' }}
+              transition={{ duration: 0.6, delay: 0.5,ease:'easeIn' }}
             >
               <article className="portfolio__item" key={pro.id}>
                 <div className="portfolio__item-image">

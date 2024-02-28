@@ -27,7 +27,7 @@ const Experience = () => {
             }}
             initial="hidden"
             animate={mainControls}
-            transition={{ duration: 1, delay: 0.25 ,ease:'easeIn'}}
+            transition={{ duration: 0.6, delay: 0.25 ,ease:'easeIn'}}
           >
             <div className="experience__frontend">
               <h3>Front-end Development</h3>
@@ -74,7 +74,7 @@ const Experience = () => {
             }}
             initial="hidden"
             animate={mainControls}
-            transition={{ duration: 1, delay: 0.25 ,ease:'easeIn'}}
+            transition={{ duration: 0.6, delay: 0.25 ,ease:'easeIn'}}
           >
             <div className="experience__backend">
               <h3>Back-end Development</h3>

@@ -77,7 +77,7 @@ const Testimonials = () => {
         }}
         initial="hidden"
         animate={mainControls}
-        transition={{ duration: 1, delay: 0.25 ,ease:'easeIn'}}
+        transition={{ duration: 0.6, delay: 0.25 ,ease:'easeIn'}}
       >
         <section id="testmonials">
           <h5>Feedback from my peers</h5>
