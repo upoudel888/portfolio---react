@@ -35,7 +35,7 @@ const Intro = () => {
           <div className="container about__container">
             <div className="about__me">
               <div className="about__me-image">
-                <img src={ME} alt="me" />
+                <img src={ME} alt="Ujjwal Paudel" />
               </div>
             </div>
             <div className="about__content">
