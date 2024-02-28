@@ -30,9 +30,9 @@ const Header = () => {
       >
         <header id="home">
           <div className="container header__container">
-            <h5>Hello I'm</h5>
+            <h4>Hello I'm</h4>
             <h1>Ujjwal Paudel</h1>
-            <h5 className="text-light">Full-stack Developer</h5>
+            <h4 className="text-light">Computer Engineer &nbsp;|&nbsp; Full-stack Developer &nbsp;|&nbsp; AI-ML enthusiast</h4>
             <CTA />
             <a href="#contact" className="scroll__down">
               Scroll Down

@@ -37,7 +37,7 @@ const Portfolio = () => {
       title: "EZ-Crossword",
       img: IMG2,
       description:
-        "EZ-crossword is the ultimate destination for crossword enthusiasts, offering seamless solutions for solving challenging puzzles or creating personalized ones. Whether you're tackling a tough grid or crafting your own, EZ-crossword has you covered.",
+        "EZ-crossword is the ultimate destination for crossword enthusiasts, offering seamless solutions for solving challenging puzzles or creating personalized ones.",
       technologies: "Django | FastAPI",
       link: "https://ez-crossword.vercel.app/",
       github: "https://github.com/upoudel888/EZ-Crossword",
@@ -68,7 +68,7 @@ const Portfolio = () => {
       title: "Productivity Companion",
       img: IMG6,
       description:
-        "Productivity Companion is your ultimate ally in the pursuit of efficiency and excellence. Seamlessly integrating essential practices like to-do listing, session tracking, task scheduling, Pomodoro technique, and focused music study, this all-in-one application empowers scholars worldwide to optimize their workflow and achieve their goals with ease.",
+        "Seamlessly integrating essential practices like to-do listing, session tracking, task scheduling, Pomodoro technique, and focused music study, this all-in-one application empowers scholars worldwide to optimize their workflow and achieve their goals with ease.",
       technologies: "C++ | SFML",
       link: "https://github.com/upoudel888/Productivity-Companion",
       github: "https://github.com/upoudel888/Productivity-Companion",

@@ -10,6 +10,11 @@
     border-radius: 2rem;
     border: 1px solid transparent;
     transition: var(--transition);
+    min-height: 37rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
 .portfolio__item:hover {
