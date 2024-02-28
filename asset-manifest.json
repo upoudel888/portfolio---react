@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/static/css/main.02ed27aa.css",
+    "main.js": "/static/js/main.361306cd.js",
+    "static/media/analogClock.gif": "/static/media/analogClock.debc934fae2ec4cca39f.gif",
+    "static/media/productivity.png": "/static/media/productivity.716d180814fd5494771f.png",
+    "static/media/baghchal.png": "/static/media/baghchal.9ecb6edc65b4fd2be8fc.png",
+    "static/media/ez-crossword.png": "/static/media/ez-crossword.52133a21a00a7cf4fb6d.png",
+    "static/media/Ujjwal_Paudel_Software_Intern.pdf": "/static/media/Ujjwal_Paudel_Software_Intern.ed1e4172baa60efd78df.pdf",
+    "static/media/monument-lens.png": "/static/media/monument-lens.c8f984d27ca30849dca9.png",
+    "static/media/2048.png": "/static/media/2048.e36adebfbe67494fd4b8.png",
+    "static/media/profilepic.jpg": "/static/media/profilepic.f0f5b810118e31d3d47f.jpg",
+    "index.html": "/index.html",
+    "main.02ed27aa.css.map": "/static/css/main.02ed27aa.css.map",
+    "main.361306cd.js.map": "/static/js/main.361306cd.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.02ed27aa.css",
+    "static/js/main.361306cd.js"
+  ]
+}
