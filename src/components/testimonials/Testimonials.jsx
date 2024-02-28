@@ -41,24 +41,24 @@ const Testimonials = () => {
     },
     {
       id: 3,
+      link: "https://www.linkedin.com/in/rishav-subedi-2635a0185/",
+      name: "Rishav Subedi",
+      role: "Software Developer",
+      test: "Throughout all our collaborations, Ujjwal has always conducted himself politely and kindly. he comes across as someone that's always willing to help and puts the team ahead himself. But beneath this, I see a strength and determination to distinguish himself. he's not only someone I highly recommend but is also someone I greatly respect.",
+    },
+    {
+      id: 4,
       link: "https://www.linkedin.com/in/sushankghimire/",
       name: "Sushank Ghimire",
       role: "Full Stack Developer| Ruby on Rails | PostgreSQL | JavaScript | React | Redux | Html&Css | Python.",
       test: "I worked with Ujjwal in the same team and his communication skills are very strong. His programming skill is one of the bests, given the time frame in the field. he is a good team player.  He will probably fit in most of the companies not only because he's a good team worker, but also because he has very good skills and I know he has much more potential to be shown.",
     },
     {
-      id: 4,
+      id: 5,
       link: "https://www.linkedin.com/in/pratigya-paudel-82a60720b/",
       name: "Pratigya Paudel",
       role: "Full-Stack Web Developer. JavaScript | Rails | React | Redux.",
       test: "I mentored Ujjwal some months ago, and I can say that he is one of those people that you love to work with. he was always interested in what I was trying to teach him, paying attention and always asking questions if something was not clear. When it comes to professional skills, he is really committed to work, always doing his best and going beyond the requirements of the project he's building.",
-    },
-    {
-      id: 5,
-      link: "https://www.linkedin.com/in/rishav-subedi-2635a0185/",
-      name: "Rishav Subedi",
-      role: "Software Developer",
-      test: "Throughout all our collaborations, Ujjwal has always conducted himself politely and kindly. he comes across as someone that's always willing to help and puts the team ahead himself. But beneath this, I see a strength and determination to distinguish himself. he's not only someone I highly recommend but is also someone I greatly respect.",
     },
 
   ];
