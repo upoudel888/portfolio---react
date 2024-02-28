@@ -21,6 +21,10 @@
 
 .testimonial {
     background: var(--color-bg-variant);
+    cursor: move; /* fallback if grab cursor is unsupported */
+    cursor: grab;
+    cursor: -moz-grab;
+    cursor: -webkit-grab;
     text-align: center;
     padding: 2rem;
     border-radius: 2rem;

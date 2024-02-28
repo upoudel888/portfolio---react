@@ -1,39 +1,84 @@
-import React from 'react';
-import { FaAward } from 'react-icons/fa';
-import { VscFolderLibrary } from 'react-icons/vsc';
-import ME from '../../assets/me.jpg';
-import './intro.css';
+import React, { useRef, useEffect } from "react";
+import { FaAward } from "react-icons/fa";
+import { VscFolderLibrary } from "react-icons/vsc";
+import ME from "../../assets/profilepic.jpg";
+import "./intro.css";
+
+import { motion, useAnimation, useInView } from "framer-motion";
 
 const Intro = () => {
-  return (
-    <section id="about">
-      <h5>Get to know</h5>
-      <h2>About Me</h2>
-      <div className="container about__container">
-        <div className="about__me">
-          <div className="about__me-image">
-            <img src={ME} alt="me" />
-          </div>
-        </div>
-        <div className="about__content">
-          <div className="about__cards">
-            <article className="about__card">
-              <FaAward className="about__icon" />
-              <h5>Experience</h5>
-              <small>1+ year</small>
-            </article>
-            <article className="about__card">
-              <VscFolderLibrary className="about__icon" />
-              <h5>Projects</h5>
-              <small>20+ Completed Projects</small>
-            </article>
-          </div>
-          <p>I’ve spent the last several months in a remote environment, working with HTML, CSS, JavaScript, building everything from landing pages to APIs. My experience as a teacher in an international school helped me collaborate with fellow developers from all over the world. Additionally, working with kids isn’t an easy task, however, it has helped me become efficient, productive, and fast even in a very stressful environment, which is an important skill in the tech industry.</p>
-          <a href="#contact" className="btn btn-primary">Let's Talk</a>
-        </div>
-      </div>
-    </section>
-  )
-}
+  const ref = useRef(null);
+  const isInview = useInView(ref, { once: true });
 
-export default Intro
+  const mainControls = useAnimation();
+
+  useEffect(() => {
+    if (isInview) {
+      mainControls.start("visible");
+    }
+  });
+
+  return (
+    <div ref={ref}>
+      <motion.div
+        variants={{
+          hidden: { opacity: 0, y: 75 },
+          visible: { opacity: 1, y: 0 },
+        }}
+        initial="hidden"
+        animate={mainControls}
+        transition={{ duration: 1, delay: 0.25,ease:'easeIn' }}
+      >
+        <section id="about">
+          <h5>Get to know</h5>
+          <h2>About Me</h2>
+          <div className="container about__container">
+            <div className="about__me">
+              <div className="about__me-image">
+                <img src={ME} alt="me" />
+              </div>
+            </div>
+            <div className="about__content">
+              <div className="about__cards">
+                <article className="about__card">
+                  <FaAward className="about__icon" />
+                  <h5>Experience</h5>
+                  <small>1+ year</small>
+                </article>
+                <article className="about__card">
+                  <VscFolderLibrary className="about__icon" />
+                  <h5>Projects</h5>
+                  <small>10+ Completed Projects</small>
+                </article>
+              </div>
+              <ul className="my-proficiency">
+                <li>
+                  - &nbsp;Skilled Computer Engineering student specializing in
+                  Full Stack Web Development with expertise in React for
+                  front-end and Django for back-end.
+                </li>
+                <li>
+                  - &nbsp;Experienced in game development, I thrive on crafting
+                  immersive experiences and optimizing performance using React
+                  and React Native.
+                </li>
+                <li>
+                  - &nbsp; Fascinated by AI/ML, I'm eager to explore innovative
+                  applications and contribute to cutting-edge projects. <br />
+                  <br />
+                  Let's connect and collaborate on exciting ventures!
+                </li>
+              </ul>
+
+              <a href="#contact" className="btn btn-primary">
+                Let's Talk
+              </a>
+            </div>
+          </div>
+        </section>
+      </motion.div>
+    </div>
+  );
+};
+
+export default Intro;

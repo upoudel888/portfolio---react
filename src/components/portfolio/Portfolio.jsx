@@ -1,114 +1,140 @@
-import React from 'react';
-import IMG1 from '../../assets/alc.png';
-import IMG2 from '../../assets/todo.png';
-import IMG3 from '../../assets/shelter.png';
-import IMG4 from '../../assets/fake.png';
-import IMG5 from '../../assets/news.png';
-import IMG6 from '../../assets/math.png';
+import React, { useRef, useEffect } from "react";
+import IMG1 from "../../assets/baghchal.png";
+import IMG2 from "../../assets/ez-crossword.png";
+import IMG3 from "../../assets/monument-lens.png";
+import IMG4 from "../../assets/2048.png";
+import IMG5 from "../../assets/analogClock.gif";
+import IMG6 from "../../assets/productivity.png";
+import { motion, useAnimation, useInView } from "framer-motion";
 
-import './portfolio.css';
+import "./portfolio.css";
 
 const Portfolio = () => {
+  const ref = useRef(null);
+  const isInview = useInView(ref, { once: true });
+
+  const mainControls = useAnimation();
+
+  useEffect(() => {
+    if (isInview) {
+      mainControls.start("visible");
+    }
+  });
+
   const soloProjects = [
     {
       id: 1,
-      title: 'Adventist Learning Center',
+      title: "Baghchal",
       img: IMG1,
       description:
-        'Adventist Learning Center provides quality education to Syrian and Kurdish Refugees living in Beirut, Lebanon. This simple website was built to reach a bigger audience and ease the process of gathering donations for the ALC students.',
-      technologies: 'Ruby on Rails | SCSS',
-      link: 'https://adventistlearningcenter-257375ab1970.herokuapp.com/',
-      github: 'https://github.com/Meri-MG/school',
+        "Bagchal (Baghchal / Tiger and Goat game) is a traditional Nepalese board game. It is a two player Board game. As acclaimed, back in the days it was played by hearders as a passtime while grazing cattles.",
+      technologies: "Javascript | React",
+      link: "https://www.ujjwalpaudel1.com.np/",
+      github: "https://github.com/upoudel888/baghchal",
     },
     {
       id: 2,
-      title: 'FakeStore',
-      img: IMG4,
+      title: "EZ-Crossword",
+      img: IMG2,
       description:
-        'FakeStore app that provides information about available products and their details',
-      technologies: 'React | Redux',
-      link: 'https://fakestore-metrics.netlify.app/',
-      github: 'https://github.com/Meri-MG/Fakestore---react',
+        "EZ-crossword is the ultimate destination for crossword enthusiasts, offering seamless solutions for solving challenging puzzles or creating personalized ones. Whether you're tackling a tough grid or crafting your own, EZ-crossword has you covered.",
+      technologies: "Django | FastAPI",
+      link: "https://ez-crossword.vercel.app/",
+      github: "https://github.com/upoudel888/EZ-Crossword",
     },
     {
       id: 3,
-      title: 'To-Do App',
-      img: IMG2,
-      description: 'User friendly app to plan your day and manage tasks',
-      technologies: 'JavaScript | Webpack',
-      link: 'https://meri-mg.github.io/To-Do-List/dist/',
-      github: 'https://github.com/Meri-MG/To-Do-List',
+      title: "Monument Lens",
+      img: IMG3,
+      description:
+        "Monument Lens revolutionizes sightseeing in Kathmandu Valley with AI-powered recognition of iconic landmarks from user-submitted images. Seamlessly identify monuments from the three Durbar Squares, enhancing your exploration experience effortlessly.",
+      technologies: "Django | Gradio | Flutter ",
+      link: "https://huggingface.co/spaces/Ujjwal123/detectMonument",
+      github:
+        "https://huggingface.co/spaces/Ujjwal123/detectMonument/tree/main",
     },
     {
       id: 4,
-      title: 'Shelter',
-      img: IMG3,
+      title: "2048 Number Game",
+      img: IMG4,
       description:
-        'Fully responsive interactive website built based on Figma design',
-      technologies: 'JavaScript | CSS',
-      link: 'https://meri-mg.github.io/shelter/pages/main/index.html',
-      github: 'https://github.com/Meri-MG/shelter',
+        "2048 Number Game is the addictive puzzle sensation that challenges players to merge tiles and reach the elusive 2048 tile. With simple yet engaging gameplay, immerse yourself in the quest for numerical mastery.",
+      technologies: "JavaScript | React | CSS",
+      link: "https://github.com/upoudel888/2048NumberGame",
+      github: "https://upoudel888.github.io/2048NumberGame/",
     },
     {
       id: 5,
-      title: 'World News',
-      img: IMG5,
+      title: "Productivity Companion",
+      img: IMG6,
       description:
-        'Fully responsive interactive website built based on Adobe XD design',
-      technologies: 'JavaScript | CSS',
-      link: 'https://meri-mg.github.io/Unilab-world-news/',
-      github: 'https://github.com/Meri-MG/Unilab-world-news',
+        "Productivity Companion is your ultimate ally in the pursuit of efficiency and excellence. Seamlessly integrating essential practices like to-do listing, session tracking, task scheduling, Pomodoro technique, and focused music study, this all-in-one application empowers scholars worldwide to optimize their workflow and achieve their goals with ease.",
+      technologies: "C++ | SFML",
+      link: "https://github.com/upoudel888/Productivity-Companion",
+      github: "https://github.com/upoudel888/Productivity-Companion",
     },
     {
       id: 6,
-      title: 'Math Resource',
-      img: IMG6,
+      title: "Analog Clock",
+      img: IMG5,
       description:
-        'Real-world group project which is still in progress and will provide educational platform for future young developers',
-      technologies: 'JavaScript | Scss | Python',
-      link: 'https://lukinoo.github.io/math-resource/',
-      github: 'https://github.com/lukinoo/math-resource',
+        "A 3D model of a wall clock that mirrors local time of the computer. This project was coded in C++ using openGL and freeGLUT",
+      technologies: "C++ | openGL | GLUT",
+      link: "https://github.com/upoudel888/Analog-Clock",
+      github: "https://github.com/upoudel888/Analog-Clock",
     },
   ];
 
   return (
-    <section id="portfolio">
-      <h5>My Recent Work</h5>
-      <h2>Portfolio</h2>
+    <div ref={ref}>
+      <section id="portfolio">
+        <h5>My Recent Work</h5>
+        <h2>Portfolio</h2>
 
-      <div className="container portfolio__container">
-        {soloProjects.map((pro) => (
-          <article className="portfolio__item" key={pro.id}>
-            <div className="portfolio__item-image">
-              <img src={pro.img} alt={pro.title} />
-            </div>
-            <div className="portfolio__item-content">
-              <h3>{pro.title}</h3>
-              <p>{pro.description}</p>
-              <p>{pro.technologies}</p>
-            </div>
-            <div className="portfolio__item-cta">
-              <a
-                href={pro.github}
-                target="_blank"
-                className="btn"
-                rel="noreferrer"
-              >
-                GitHub
-              </a>
-              <a
-                href={pro.link}
-                target="_blank"
-                className="btn btn-primary"
-                rel="noreferrer"
-              >
-                Visit Website
-              </a>
-            </div>
-          </article>
-        ))}
-      </div>
-    </section>
+        <div className="container portfolio__container">
+          {soloProjects.map((pro) => (
+            <motion.div
+              variants={{
+                hidden: { opacity: 0, y: 75 },
+                visible: { opacity: 1, y: 0 },
+              }}
+              initial="hidden"
+              animate={mainControls}
+              transition={{ duration: 1, delay: 0.5,ease:'easeIn' }}
+            >
+              <article className="portfolio__item" key={pro.id}>
+                <div className="portfolio__item-image">
+                  <img src={pro.img} alt={pro.title} />
+                </div>
+                <div className="portfolio__item-content">
+                  <h3>{pro.title}</h3>
+                  <p>{pro.description}</p>
+                  <p>{pro.technologies}</p>
+                </div>
+                <div className="portfolio__item-cta">
+                  <a
+                    href={pro.github}
+                    target="_blank"
+                    className="btn"
+                    rel="noreferrer"
+                  >
+                    GitHub
+                  </a>
+                  <a
+                    href={pro.link}
+                    target="_blank"
+                    className="btn btn-primary"
+                    rel="noreferrer"
+                  >
+                    Visit Website
+                  </a>
+                </div>
+              </article>
+            </motion.div>
+          ))}
+        </div>
+      </section>
+    </div>
   );
 };
 
