@@ -23,7 +23,7 @@ const Contact = () => {
     setMessage(true);
     emailjs
       .sendForm(
-        "service_qaho1oi",
+        "service_b5crtuj",
         "template_cjf0zmi",
         formRef.current,
         "r92KunO3zICs_p-Ty"
